@@ -4,8 +4,13 @@ import { Badge, Col } from 'antd'
 import { WrapperHeader, WrapperHeaderAccount, WrapperTextHeader, WrapperTextHeaderSmall } from "./style";
 import { UserOutlined, CaretDownOutlined, ShoppingCartOutlined} from '@ant-design/icons';
 import ButtonInputSearch from "../ButtonInputSearch/ButtonInputSearch";
+import { useNavigate } from "react-router-dom";
 
 const HeaderComponent = () => {
+  const navigate = useNavigate()
+  const handleNavigateLogin = () => {
+    navigate('/sign-in')
+  }
   return (
     <div style={{ width: '100%', background: 'rgb(26, 148, 255)', display: 'flex', justifyContent: 'center' }}>
       <WrapperHeader>
@@ -25,7 +30,7 @@ const HeaderComponent = () => {
         <Col span={6} style={{ display: 'flex', gap: '54px', alignItems: 'center'}} >
             <WrapperHeaderAccount>
                 <UserOutlined style={{ fontSize: '30px'}} />
-                <div>
+                <div onClick={handleNavigateLogin} style={{ cursor: 'pointer'}}>
                     <WrapperTextHeaderSmall>Đăng Nhập/ Đăng Ký</WrapperTextHeaderSmall>
                     <div>
                         <WrapperTextHeaderSmall>Tài Khoản</WrapperTextHeaderSmall>
