@@ -6,8 +6,8 @@ import jwt_decode from "jwt-decode"
 import * as UserService from './services/UserService'
 import { useDispatch } from 'react-redux'
 import { updateUser } from './redux/slides/userSlide';
-import axios from 'axios';
-import { isJsonString } from './utils'
+import { isJsonString } from './Utils';
+
 
 function App() {
 
