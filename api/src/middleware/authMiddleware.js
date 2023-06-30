@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const authMiddleware = (req, res, next) => {
+const authMiddleWare = (req, res, next) => {
     const token = req.headers.token.split(' ')[1]
     jwt.verify(token, process.env.ACCESS_TOKEN, function(err, user) {
         if (err) {
@@ -22,7 +22,7 @@ const authMiddleware = (req, res, next) => {
     })
 }
 
-const authUserMiddleware = (req, res, next) => {
+const authUserMiddleWare = (req, res, next) => {
     const token = req.headers.token.split(' ')[1]
     const userId = req.params.id
     jwt.verify(token, process.env.ACCESS_TOKEN, function(err, user) {
@@ -32,7 +32,6 @@ const authUserMiddleware = (req, res, next) => {
                 status: 'ERR'
             })
         }
-        console.log('user', user)
         if (user?.isAdmin || user?.id === userId) {
             next()
         } else {
@@ -45,6 +44,6 @@ const authUserMiddleware = (req, res, next) => {
 }
 
 module.exports = {
-    authMiddleware,
-    authUserMiddleware
+    authMiddleWare,
+    authUserMiddleWare
 }

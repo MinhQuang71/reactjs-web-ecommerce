@@ -48,9 +48,9 @@ const NavbarComponent = () => {
   }
   return (
     <div>
-        <WrapperLableText>Label</WrapperLableText>
+        <WrapperLableText>Danh mục sản phẩm</WrapperLableText>
         <WrapperContent>
-            {renderContent('text', ['Tu lanh', 'TV', 'May Giat'])}
+            {renderContent('text', ['Lap top', 'Loa', 'Máy giặt', 'Máy lọc nước', 'Nồi cơm', 'Robot hút bụi', 'Tivi', 'Tủ lạnh', 'Tủ đông', 'Điện thoại'])}
         </WrapperContent>
         
     </div>
@@ -58,3 +58,4 @@ const NavbarComponent = () => {
 }
 
 export default NavbarComponent
+
