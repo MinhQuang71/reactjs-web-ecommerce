@@ -267,7 +267,7 @@ const PaymentPage = () => {
               </WrapperInfo>
             </WrapperLeft>
             <WrapperRight>
-              <div style={{width: '100%'}}>
+              <div style={{width: '100%', marginLeft: '80px'}}>
                 <WrapperInfo>
                   <div>
                     <span>Địa chỉ: </span>
@@ -313,9 +313,11 @@ const PaymentPage = () => {
                   size={40}
                   styleButton={{
                       background: 'rgb(255, 57, 69)',
-                      height: '48px',
-                      width: '320px',
+                      height: '92px',
+                      width: '360px',
                       border: 'none',
+                      paddingLeft: ' 200px',
+                      marginLeft: '120px',
                       borderRadius: '4px'
                   }}
                   textbutton={'Đặt hàng'}
