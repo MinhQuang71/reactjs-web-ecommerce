@@ -32,7 +32,7 @@ const OrderSucess = () => {
                     {orderContant.payment[state?.payment]}
                   </WrapperValue>
                 </div>
-              </WrapperInfo>
+              </WrapperInfo> 
               <WrapperItemOrderInfo>
                 {state.orders?.map((order) => {
                   return (

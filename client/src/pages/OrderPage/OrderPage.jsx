@@ -259,7 +259,7 @@ const OrderPage = () => {
             </WrapperListOrder>
           </WrapperLeft>
           <WrapperRight>
-            <div style={{width: '100%'}}>
+            <div style={{width: '100%', marginTop: '30px'}}>
               <WrapperInfo>
                 <div>
                   <span>Địa chỉ: </span>
@@ -295,8 +295,9 @@ const OrderPage = () => {
               styleButton={{
                   background: 'rgb(255, 57, 69)',
                   height: '48px',
-                  width: '320px',
+                  width: '360px',
                   border: 'none',
+                  marginLeft: '40px',
                   borderRadius: '4px'
               }}
               textbutton={'Mua hàng'}

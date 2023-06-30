@@ -59,19 +59,20 @@ const createOrder = (newOrder) => {
                     isPaid, paidAt
                 })
                 if (createdOrder) {
+                await EmailService.sendEmailCreateOrder(email,orderItems)
                     resolve({
                         status: 'OK',
                         message: 'success'
                     })
-                    // await EmailService.sendEmailCreateOrder(email,orderItems)
                 }
+
             }
         } catch (e) {
-        //   console.log('e', e)
             reject(e)
         }
     })
 }
+
 
 const getAllOrderDetails = (id) => {
     return new Promise(async (resolve, reject) => {
@@ -92,7 +93,6 @@ const getAllOrderDetails = (id) => {
                 data: order
             })
         } catch (e) {
-            // console.log('e', e)
             reject(e)
         }
     })
@@ -117,7 +117,6 @@ const getOrderDetails = (id) => {
                 data: order
             })
         } catch (e) {
-            // console.log('e', e)
             reject(e)
         }
     })
@@ -161,7 +160,7 @@ const cancelOrderDetails = (id, data) => {
             if(newData) {
                 resolve({
                     status: 'ERR',
-                    message: `San pham voi id: ${newData} khong ton tai`
+                    message: `Sản phẩm với id: ${newData} không tồn tại`
                 })
             }
             resolve({
